@@ -1,0 +1,52 @@
+<!-- Banner -->
+  <section id="banner03">
+    <h1>Lista de Planetas </h1>
+    <p>Criado pela CC da IMED</p>
+  </section>
+
+  <section id="one" class="wrapper">
+    <div class="inner">
+              <!-- One -->
+          <a routerLink="/cplaneta"> Novo Cadastro</a>
+    </div>
+    <p>
+    <div class="inner">
+      <!-- Two -->
+          <h4>Lista de Planetas</h4>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                 <tr>
+                   <th>Id</th>
+                   <th>Nome</th>
+                   <th>Diâmetro (km)</th>
+                   <th>Distâcia média ao Sol (km)</th>
+                   <th>Massa do planeta (terra = 1)</th>
+                   <th>Opções</th>
+                 </tr>
+              </thead>
+                 <tbody>
+                   <tr *ngFor="let planeta of listaPlanetas">
+                     <td>{{planeta.id}}</td>
+                     <td>{{planeta.nome}}</td>
+                     <td>{{planeta.diametro}}</td>
+                     <td>{{planeta.distanciaSol}}</td>
+                     <td>{{planeta.massa}}</td>
+                     <td>
+                       <button (click)='excluir(planeta.id)'>Excluir</button>
+                       <button [routerLink]="['/cplaneta',planeta.id]">Editar</button>
+                     </td>
+                   </tr>
+                 </tbody>
+
+              <tfoot>
+                  <tr>
+                     <td>{{listaPlanetas.length}}</td>
+                     <td colspan="2">Total de Planetas</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+
+    </div>
+</section>

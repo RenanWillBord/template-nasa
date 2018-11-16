@@ -1,0 +1,48 @@
+<!-- Banner -->
+  <section id="banner02">
+    <h1>Listra de Estrelas Próximas a Terra</h1>
+    <p>Criado pela CC da IMED</p>
+  </section>
+
+  <section id="one" class="wrapper">
+    <div class="inner">
+              <!-- One -->
+          <a routerLink="/cestrela"> Novo Cadastro</a>
+    </div>
+    <p>
+    <div class="inner">
+              <!-- Two -->
+                <h4>Lista de Estrelas</h4>
+                <div class="table-wrapper">
+                  <table>
+                    <thead>
+                       <tr>
+                         <th>Id</th>
+                         <th>Nome</th>
+                         <th>Distancia</th>
+                         <th>Opções</th>
+                       </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr *ngFor="let estrela of listaEstrelas">
+                        <td>{{estrela.id}}</td>
+                        <td>{{estrela.nome}}</td>
+                        <td>{{estrela.distancia}}</td>
+                        <td>
+                          <button (click)='excluir(estrela.id)'>Excluir</button>
+                          <button [routerLink]="['/cestrela',estrela.id]">Editar</button>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                           <td>{{listaEstrelas.length}}</td>
+                           <td colspan="2">Total de Estrelas</td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+      </div>
+  </section>
