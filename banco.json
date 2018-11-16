@@ -1,0 +1,63 @@
+{
+  "estrelas": [
+    {
+      "nome": "Alpha Centauri.",
+      "distancia": "5,5 anos/luz",
+      "id": 1
+    },
+    {
+      "nome": "Barnard.",
+      "distancia": "7,9 anos/luz",
+      "id": 2
+    },
+    {
+      "nome": "Renan",
+      "distancia": "8,7 anos/Luz",
+      "id": 3
+    }
+  ],
+  "planetas": [
+    {
+      "nome": "Sol",
+      "diametro": "1 392 000",
+      "distanciaSol": "-",
+      "massa": "332 946",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Mercúrio",
+      "diametro": "4 880",
+      "distanciaSol": "57 910 000",
+      "massa": "0,1"
+    },
+    {
+      "id": 3,
+      "nome": "Vênus",
+      "diametro": "12 104",
+      "distanciaSol": "108 208 930",
+      "massa": "0,9"
+    },
+    {
+      "id": 4,
+      "nome": "Terra",
+      "diametro": "12 756",
+      "distanciaSol": "149 597 870",
+      "massa": "1"
+    },
+    {
+      "id": 5,
+      "nome": "Marte",
+      "diametro": "6 794",
+      "distanciaSol": "227 936 640",
+      "massa": "0,1"
+    },
+    {
+      "id": 6,
+      "nome": "Júpter",
+      "diametro": "142 984",
+      "distanciaSol": "778 416 010",
+      "massa": "318"
+    }
+  ]
+}
