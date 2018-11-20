@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { NgxLoadingModule } from 'ngx-loading';
 
+import { Component, OnInit } from '@angular/core';
 import {PlanetasService} from '../../services/planetas.service'
 
 
@@ -10,9 +11,11 @@ import {PlanetasService} from '../../services/planetas.service'
 })
 export class PlanetaComponent implements OnInit {
   listaPlanetas: any []
+  public loading = false;
   constructor(private planetaService: PlanetasService) { }
 
   ngOnInit() {
+    this.loading = true;
     this.getList()
     }
 
@@ -25,9 +28,11 @@ export class PlanetaComponent implements OnInit {
   }
 
   getList(){
+    console.log("estouaqui")
     this.planetaService.getList().subscribe(
       retorno => {
         this.listaPlanetas = retorno
+        this.loading = false;
       //  this.listaPlanetas.sort(predicateBy("nome"))
       }
     )

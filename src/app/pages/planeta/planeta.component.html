@@ -1,4 +1,6 @@
 <!-- Banner -->
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '3px' }" [template]="customLoadingTemplate"></ngx-loading>
+
   <section id="banner03">
     <h1>Lista de Planetas </h1>
     <p>Criado pela CC da IMED</p>
@@ -41,7 +43,7 @@
 
               <tfoot>
                   <tr>
-                     <td>{{listaPlanetas.length}}</td>
+                     <td>{{listaPlanetas?.length}}</td>
                      <td colspan="2">Total de Planetas</td>
                   </tr>
                 </tfoot>

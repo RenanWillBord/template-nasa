@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+//import { NgxSpinnerService } from 'ngx-spinner';
 
+import { NgxLoadingModule } from 'ngx-loading';
+
+import { Component, OnInit } from '@angular/core';
 import {EstrelasService} from '../../services/estrelas.service'
 
 @Component({
@@ -11,11 +14,12 @@ import {EstrelasService} from '../../services/estrelas.service'
 
 export class EstrelaComponent implements OnInit {
   listaEstrelas: any = []
-
+  public loading = false;
   constructor(private estrelaService: EstrelasService) { }
 
 
   ngOnInit(){
+      this.loading = true;
       this.getList()
 
     }
@@ -32,6 +36,7 @@ export class EstrelaComponent implements OnInit {
     this.estrelaService.getList().subscribe(
       retorno => {
         this.listaEstrelas = retorno
+        this.loading = false;
       }
     )
   }

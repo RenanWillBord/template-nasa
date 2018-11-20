@@ -1,3 +1,5 @@
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { NgxLoadingModule } from 'ngx-loading';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -36,6 +38,8 @@ import { CplanetaComponent } from './pages/cplaneta/cplaneta.component';
     HttpModule,
     FormsModule,
     ReactiveFormsModule,
+    NgxSpinnerModule,
+    NgxLoadingModule.forRoot({}),
 
   ],
   providers: [EstrelasService,PlanetasService],
